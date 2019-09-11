@@ -1,0 +1,33 @@
+/* body{
+background: grey;
+padding: 0px;
+margin: 0px;
+} */
+
+.row{
+  margin: 0px;
+  padding: 0px;
+}
+
+div.body{
+  background: grey;
+  color: white;
+}
+h3.body{
+  text-align: center;
+}
+section.destacados{
+  padding: 0px;
+  margin: 0px;
+}
+article.destacados{
+  background: red;
+  /* height: 50px; */
+  padding:  5px;
+  border: solid black 1px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+img.destacados{
+
+}
