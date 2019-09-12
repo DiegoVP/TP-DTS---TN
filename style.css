@@ -1,6 +1,6 @@
 header{
-  background-color: blue;
-  height: 50px;
+  background-color: black;
+  height: 80px;
 }
 
 body{
@@ -12,9 +12,12 @@ h3.destacados{
 }
 
 section.destacados{
-margin: 3px;
+/* margin: 3px; */
 border-radius: 10px;
 padding-bottom: 15px;
+}
+section div.destacados{
+  position: relative;
 }
 
 article.destacados{
@@ -24,9 +27,27 @@ article.destacados{
   color: rgb(15, 26, 150);
 }
 
+div.new{
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  background: green;
+  box-sizing: border-box;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  margin-right: 20%;
+}
+div.new span{
+  margin-left: 4px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+
 img.destacados{
-  border: solid 3px rgba(31, 65, 153, 0.73);
-  border-radius: 100px;
+  /* border: solid 3px rgba(31, 65, 153, 0.73);
+  border-radius: 100px; */
   margin-top: 5px;
   background: white;
   }
@@ -36,6 +57,6 @@ div.caja-destacados{
   padding: 0px;
   padding-left: 20px;
   padding-right: 20px;
-  border: black 1px solid;
-  border-radius: 5px;
+  /* border: black 1px solid;
+  border-radius: 5px; */
 }
