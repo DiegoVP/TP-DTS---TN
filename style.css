@@ -4,7 +4,7 @@ header{
 }
 
 body{
-  color: white;
+  color: blue;
 }
 h3.destacados{
   text-align: center;
@@ -59,4 +59,13 @@ div.caja-destacados{
   padding-right: 20px;
   /* border: black 1px solid;
   border-radius: 5px; */
+}
+
+
+body.bLogin{
+  color: black;
+}
+
+body.bregister{
+  color: black;
 }
