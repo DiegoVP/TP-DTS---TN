@@ -54,7 +54,7 @@ div.destacados-celu{
   margin-top: 30px;
 }
 
-/* -----promosiones---- */
+/* -----promociones---- */
 section.promociones{
   margin-top: 50px;
 }
@@ -70,19 +70,35 @@ div.bd-example{
 }
 
 /* ------Body-login----- */
-body.bLogin{
-  color: black;
+body #bLogin{
+  background: #716286;
 }
+div #titulologinpage{
+  margin-top: 50px;
+  background:  #716286;
+
+}
+div #inforegister {
+  background:  #716286;
+  border-radius: 10px
+}
+div #logininfo {
+  background:  #716286;
+  border-radius: 10px;
+}
+
 /* ------Body-Register----- */
-body.bregister{
+body #bregister{
   color: black;
 }
+
+
 
 /* -----Footer----- */
 footer{
   height: 300px;
   background: #231038;
-  margin-top: 60px;
+  margin-top: 300px;
   text-align: center;
   color: white;
   font-size: 150px;
