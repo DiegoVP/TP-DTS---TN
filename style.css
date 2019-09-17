@@ -1,71 +1,89 @@
 header{
-  background-color: black;
-  height: 80px;
+color: white;
+background: #231038;
+text-align: center;
+height: 90px;
+}
+body{
+  background-image: url(img/fondo1.jpg);
+
 }
 
-body{
-  color: blue;
-}
-h3.destacados{
-  text-align: center;
-  color: blue;
-}
+/* -----Destacados----- */
 
 section.destacados{
-/* margin: 3px; */
-border-radius: 10px;
-padding-bottom: 15px;
+  margin-top: 55px;
 }
 section div.destacados{
-  position: relative;
+font-family: 'Playfair Display', serif;
+color: WHITE;
+background: #716286;
+padding-bottom: 50PX;
+border-radius: 10px;
 }
-
-article.destacados{
-  padding:  5px;
-  margin:0px;
-  margin-top: 10px;
-  color: rgb(15, 26, 150);
+h2.home{
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-
-div.new{
-  height: 50px;
-  width: 50px;
-  border-radius: 25px;
-  background: green;
-  box-sizing: border-box;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  margin-right: 20%;
+h4.home{
+  font-size: 20px;
+  margin-top: 15px;
 }
-div.new span{
-  margin-left: 4px;
+div.imagen{
+  display: flex;
+  justify-content: center;
+}
+div.p-2.destacados{
+  font-size: 25px;
   display: inline-block;
-  margin-top: 10px;
+  background-color:#231038 ;
+  color: white;
+  font-weight: bold;
 }
-
-
 img.destacados{
-  /* border: solid 3px rgba(31, 65, 153, 0.73);
-  border-radius: 100px; */
-  margin-top: 5px;
-  background: white;
-  }
-
-div.caja-destacados{
-  margin: 0px;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  /* border: black 1px solid;
-  border-radius: 5px; */
+  margin-bottom: 10px;
+  width: 150px;
+  border-radius: 10px;
+}
+article.destacados{
+margin-top: 40px;
+margin-bottom: 5px;
+}
+div.destacados-celu{
+  margin-top: 30px;
 }
 
+/* -----promosiones---- */
+section.promociones{
+  margin-top: 50px;
+}
+section div.promociones{
+font-family: 'Playfair Display', serif;
+color: WHITE;
+background: #231038;
+padding: 10PX;
+border-radius: 10px;
+}
+div.bd-example{
+  border: solid 3px rgb(0, 0, 0);
+}
 
+/* ------Body-login----- */
 body.bLogin{
   color: black;
 }
-
+/* ------Body-Register----- */
 body.bregister{
   color: black;
 }
+
+/* -----Footer----- */
+footer{
+  height: 300px;
+  background: #231038;
+  margin-top: 60px;
+  text-align: center;
+  color: white;
+  font-size: 150px;
+  }
