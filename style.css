@@ -157,16 +157,7 @@ border: 1px solid #fff;
 border-radius: 100%;
 }
 
-body {
-  background-image: url(img/fondo1.jpg);
-}
-
 /* -----Destacados----- */
-
-section.destacados{
-/* section.destacados{
-  margin-top: 55px;
-} */
 section.destacados{
   margin-top: 50px;
   border-top: solid black 5px;
@@ -174,11 +165,6 @@ section.destacados{
   background: #c1c1c1;
 }
 section div.destacados{
-font-family: 'Playfair Display', serif;
-color: WHITE;
-background: #716286;
-padding-bottom: 50PX;
-border-radius: 10px;
   font-family: 'Playfair Display', serif;
   color: black;
   padding-bottom: 50PX;
@@ -211,8 +197,6 @@ img.destacados{
   border-radius: 10px;
 }
 article.destacados{
-margin-top: 40px;
-margin-bottom: 5px;
   margin-top: 40px;
   margin-bottom: 5px;
   display: flex;
@@ -237,6 +221,22 @@ div.destacados-celu{
   margin-top: 30px;
 }
 
+/* -----promociones---- */
+section.promociones{
+  margin-top: 50px;
+  background: #231038;
+  padding-bottom: 40px;
+}
+section div.promociones{
+  font-family: 'Playfair Display', serif;
+  color: WHITE;
+  background: #231038;
+  padding: 10PX;
+  border-radius: 10px;
+}
+div.bd-example{
+  border: solid 3px rgb(0, 0, 0);
+}
 /* -----HOMBRE MUJER---- */
 section.hombre-mujer{
   margin-top: 50px;
@@ -248,28 +248,6 @@ section.hombre-mujer div:hover{
   transform: scale(1.02);
   transition-duration: 0.5s;
 }
-/* -----promosiones---- */
-section.promociones{
-  margin-top: 50px;
-  background: #231038;
-  padding-bottom: 40px;
-}
-section div.promociones{
-font-family: 'Playfair Display', serif;
-color: WHITE;
-background: #231038;
-padding: 10PX;
-border-radius: 10px;
-  font-family: 'Playfair Display', serif;
-  color: WHITE;
-  background: #231038;
-  padding: 10PX;
-  border-radius: 10px;
-}
-div.bd-example{
-  border: solid 3px rgb(0, 0, 0);
-}
-
 
 /* ------Body-login----- */
 body #bLogin{
