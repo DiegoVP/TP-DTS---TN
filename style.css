@@ -254,19 +254,21 @@ body #bLogin{
   background: #716286;
 }
 div #titulologinpage{
-  margin-top: 50px;
+  margin: 0px;
   background:  #716286;
-
+padding: 10px;
 }
 div #inforegister {
   background:  #716286;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 0px;
+  padding: 50px;
+  margin-bottom: 0px
 }
 div #logininfo {
   background:  #716286;
-  border-radius: 10px;
-  padding: 25px;
+  border-radius: 0px;
+  padding: 50px;
+  ;
 }
 
 /* ------Body-Register----- */
