@@ -260,7 +260,7 @@ section.hombre-mujer div:hover{
 }
 
 /* ------Body-login----- */
-body #bLogin{
+body.bLogin{
   background: #716286;
 }
 div #titulologinpage{
@@ -272,7 +272,7 @@ div #inforegister {
   background:  #716286;
   border-radius: 0px;
   padding: 50px;
-  margin-bottom: 0px
+  margin-right: 0;
 }
 div #logininfo {
   background:  #716286;
@@ -284,6 +284,7 @@ div #logininfo {
 /* ------Body-Register----- */
 body.bregister{
   color: black;
+  background: #716286;
 }
 div.inforegiter{
   margin-top: 0px;
