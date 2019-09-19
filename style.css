@@ -224,6 +224,7 @@ div.destacados-celu{
 /* -----promociones---- */
 section.promociones{
   margin-top: 50px;
+  margin-bottom: 50px;
   background: #231038;
   padding-bottom: 40px;
 }
@@ -240,8 +241,12 @@ div.bd-example{
 /* -----HOMBRE MUJER---- */
 section.hombre-mujer{
   margin-top: 50px;
+  padding: 0px;
 }
-section.hombre-mujer div{
+section.hombre-mujer a div{
+  margin: 0px;
+}
+section.hombre-mujer a {
   margin: 0px;
 }
 section.hombre-mujer div:hover{
