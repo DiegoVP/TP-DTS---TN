@@ -280,7 +280,9 @@ div #logininfo {
   padding: 50px;
   ;
 }
-
+label.form-check-label-Recordarme{
+  margin-left: 20px;
+}
 /* ------Body-Register----- */
 body.bregister{
   color: black;
