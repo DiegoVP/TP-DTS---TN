@@ -5,7 +5,7 @@
     <!-- ******* BOOTSTRAP-online ***** -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- ******* BOOTSTRAP-online ***** -->
-
+<meta name="viewport" content="with=device-with, initial-scale=1">
     <!-- ******* BOOTSTRAP-css ***** -->
     <link rel="stylesheet" href="bootstrap.css">
     <!-- ******* BOOTSTRAP-css ***** -->
@@ -28,7 +28,7 @@
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Gayathri|Lora|Montserrat|Playfair+Display&display=swap" rel="stylesheet">    <!-- ******* GOOGLE FONTS ***** -->
         <!-- ******* GOOGLE FONTS ***** -->
 
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
         <!------ Include the above in your HEAD tag ---------->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -39,14 +39,14 @@
 
     <title>Relojes D T S | login </title>
   </head>
-  <body id="bLogin">
+  <body class="bLogin">
     <header class="header">
     	<div class="header-inner">
     		<div class="container">
     			<div class="row">
 
     				<div class="col-sm-6 col-md-3 ">
-    					<a class="header-logo" href="#">
+    					<a class="header-logo" href="index.html">
     					<img class="img-responsive" src="img/logo-sin-fondo.png" style="width:100px;" alt="">
     					</a>
     					<div class="empty-space xs-25 sm-25"></div>
@@ -68,7 +68,7 @@
 
     					<!-- T-USER -->
     					<ul class="tt-user">
-    						<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+    						<li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
     						<li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
     					</ul>
     					<div class="empty-space marg-lg-b30"></div>
@@ -77,7 +77,7 @@
     						<div class="tt-buscar">
     							<input type="text" required="" placeholder="Buscar...">
     							<div class="tt-buscar-submit">
-    								<i class="fa fa-envelope" aria-hidden="true"></i>
+    								<i class="fa fa-search" aria-hidden="true"></i>
     								<input type="submit" value="">
     							</div>
     						</div>
@@ -89,7 +89,8 @@
     		</div>
     	</div>
     </header>
-    <div id="titulologinpage" class="container row col-12 ">
+
+    <div id="titulologinpage" class="container-fluid ">
       <h1 id="titulologinpage" class="col-12">Iniciar seción o Registrarse</h1>
     </div>
       </div>
@@ -107,14 +108,14 @@
   </div>
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">"    ,Recordarme</label>
+    <label class="form-check-label-Recordarme" for="exampleCheck1">Recordarme</label>
   </div>
   <button type="submit" class="btn btn-primary">Iniciar seción</button>
     <p id="forgotpassword">
       <a href="">Olvido su contraseña?</a></p>
 </form>
 </div>
-    <div class= "col-lg-6 col-md-12" id="inforegister">
+    <div class= "col-lg-5 col-md-12" id="inforegister">
 <h4 id= "tituloregister"> Nuevos usuarios </h4>
 <p id="inforegister">Al crear una cuenta con nuestra tienda podrás moverte más rápidamente por el proceso de pago, guardar múltiples direcciones de envío, ver y seguir el rastro de los pedidos de tu cuenta y más!! </p>
 <br>
@@ -122,31 +123,31 @@
 <a class="btn btn-primary" href="register.html" role="button">REGISTRARSE</a>
 </div>
 
-<footer class="row col-12">
+
+</div>
+<footer>
  <div class="container">
    <div class="row">
 
             <div class="col-md-4 col-sm-6 col-xs-12">
-              <img class="logo" src="img/logo-sin-fondo.png" alt="logo">
+              <a href="index.html">
+                <img class="logo" src="img/logo-sin-fondo.png" style="width:250px;" alt="logo">
+              </a>
             </div>
 
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <ul class="menu">
                      <span>Menu</span>
                      <li>
-                        <a href="#">Home</a>
+                        <a href="index.html">Home</a>
                       </li>
 
                       <li>
-                         <a href="#">Productos</a>
+                        <a href="#">Nosotros</a>
                       </li>
 
                       <li>
-                        <a href="#">Promociones</a>
-                      </li>
-
-                      <li>
-                         <a href="#">Preguntas Frecuentes </a>
+                         <a href="faq.html">Preguntas Frecuentes </a>
                       </li>
                  </ul>
             </div>
