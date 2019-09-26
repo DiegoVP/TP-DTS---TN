@@ -1,0 +1,15 @@
+/*------Colores--------------
+violeta: #231038
+*/
+
+/* -----frecuent Ask Question ---- */
+div.faq{
+  background: #c1c1c1;
+margin-top: 20px;
+margin-bottom: 20px;
+color: black;
+padding-bottom: 5px;
+}
+.faq div{
+  border-top: solid 10px white;
+}
