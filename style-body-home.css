@@ -63,6 +63,7 @@ div.articulo-fondo{
 }
 div.destacados-celu{
   margin-top: 30px;
+  text-align: center;
 }
 
 /* -----promociones---- */
@@ -92,6 +93,9 @@ section.hombre-mujer a div{
 }
 section.hombre-mujer a {
   margin: 0px;
+}
+section.hombre-mujer div{
+  transition-duration: 0.5s;
 }
 section.hombre-mujer div:hover{
   transform: scale(1.02);
