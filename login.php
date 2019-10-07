@@ -73,7 +73,7 @@
 <p id="inforegister">Al crear una cuenta con nuestra tienda podrás moverte más rápidamente por el proceso de pago, guardar múltiples direcciones de envío, ver y seguir el rastro de los pedidos de tu cuenta y más!! </p>
 <br>
 <br>
-<a class="btn btn-primary" href="register.html" role="button">REGISTRARSE</a>
+<a class="btn btn-primary" href="register.php" role="button">REGISTRARSE</a>
 </div>
 
 

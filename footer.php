@@ -40,7 +40,7 @@
        <div class="row">
 
                 <div class="col-md-4 col-sm-6 col-xs-12">
-                  <a href="index.html">
+                  <a href="index.php">
                     <img class="logo" src="img/logo-sin-fondo.png" style="width:250px;" alt="logo">
                   </a>
                 </div>
@@ -49,7 +49,7 @@
                     <ul class="menu">
                          <span>Menu</span>
                          <li>
-                            <a href="index.html">Home</a>
+                            <a href="index.php">Home</a>
                           </li>
 
                           <li>
@@ -57,7 +57,7 @@
                           </li>
 
                           <li>
-                             <a href="faq.html">Preguntas Frecuentes </a>
+                             <a href="faq.php">Preguntas Frecuentes </a>
                           </li>
                      </ul>
                 </div>

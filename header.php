@@ -37,7 +37,7 @@
     			<div class="row">
 
     				<div class="col-sm-6 col-md-3 ">
-    					<a class="header-logo" href="index.html">
+    					<a class="header-logo" href="index.php">
     					<img class="img-responsive" src="img/logo-sin-fondo.png" style="width:100px;" alt="">
     					</a>
     					<div class="empty-space xs-25 sm-25"></div>
@@ -59,7 +59,7 @@
 
     					<!-- T-USER -->
     					<ul class="tt-user">
-    						<li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+    						<li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
     						<li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
     					</ul>
     					<div class="empty-space marg-lg-b30"></div>
