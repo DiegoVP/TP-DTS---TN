@@ -1,0 +1,20 @@
+/* ------Body-Register----- */
+body.bregister{
+  color: black;
+  background: #716286;
+}
+div.inforegiter{
+  margin-top: 0px;
+  background-color: #716286;
+  padding: 25px;
+}
+div.listregister{
+  background-color: #716286;
+  padding:10px;
+}
+img.logoregistro{
+  width: 500px;
+  height:500px;
+  margin-left: 25%;
+  margin-top: 20px;
+}

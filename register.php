@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <!-- ******* BOOTSTRAP-css ***** -->
-    <link rel="stylesheet" href="bootstrap.css">
-    <!-- ******* BOOTSTRAP-css ***** -->
+
 <meta name="viewport" content="with=device-with, initial-scale=1">
     <!-- ******* BOOTSTRAP-JAVA ***** -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -18,7 +16,7 @@
     <!-- ******* J-QUERY ***** -->
 
     <!-- ******* STYLE.CSS ***** -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style-body-register.css">
     <!-- ******* STYLE.CSS ***** -->
 
         <!-- ******* GOOGLE FONTS ***** -->
@@ -34,58 +32,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-    <title>Relojes D T S | Register </title>
+    <title>Registro</title>
   </head>
   <body class="bregister">
-    <header class="header">
-    	<div class="header-inner">
-    		<div class="container">
-    			<div class="row">
 
-    				<div class="col-sm-6 col-md-3 ">
-    					<a class="header-logo" href="index.html">
-    					<img class="img-responsive" src="img/logo-sin-fondo.png" style="width:100px;" alt="">
-    					</a>
-    					<div class="empty-space xs-25 sm-25"></div>
-    				</div>
 
-    				<div class="col-sm-6 col-md-5 header-2">
-    						<ul class="header-list">
-    						<li><a href="#">Relojes</a></li>
-    						<li><a href="#">Promociones</a></li>
-    						<li><a href="#">Tiendas</a></li>
-    					</ul>
-    					<div class="empty-space xs-25 sm-25"></div>
-    				</div>
+    <?php include("header.php") ?>
 
-    				<div class="col-xs-12 col-md-4 col-sm-6">
-    					<div class="marg-sm-b30"></div>
-    					<div class="empty-space marg-lg-b20"></div>
-    					<div class="empty-space marg-lg-b15"></div>
-
-    					<!-- T-USER -->
-    					<ul class="tt-user">
-    						<li><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-    						<li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-    					</ul>
-    					<div class="empty-space marg-lg-b30"></div>
-    					<!-- TT-buscar -->
-    					<form method="post">
-    						<div class="tt-buscar">
-    							<input type="text" required="" placeholder="Buscar...">
-    							<div class="tt-buscar-submit">
-    								<i class="fa fa-search" aria-hidden="true"></i>
-    								<input type="submit" value="">
-    							</div>
-    						</div>
-    					</form>
-
-    					</div>
-    			</div>
-
-    		</div>
-    	</div>
-    </header>
 
     <div class="inforegiter container-fluid ">
       <h1 id= "tituloregister2">Crear una cuenta</h1>
@@ -121,71 +74,11 @@
 </form>
 
   </div>
-  <footer>
-   <div class="container">
-     <div class="row">
 
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <a href="index.html">
-                  <img class="logo" src="img/logo-sin-fondo.png" style="width:250px;" alt="logo">
-                </a>
-              </div>
 
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                  <ul class="menu">
-                       <span>Menu</span>
-                       <li>
-                          <a href="index.html">Home</a>
-                        </li>
+  <?php include("footer.php") ?>
 
-                        <li>
-                          <a href="#">Nosotros</a>
-                        </li>
 
-                        <li>
-                           <a href="faq.html">Preguntas Frecuentes </a>
-                        </li>
-                   </ul>
-              </div>
-
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <ul class="contacto">
-                      <span>Contacto</span>
-                      <li>
-                         <i class="fa fa-phone" aria-hidden="true"></i> <a href="#">Telefono</a>
-                      </li>
-                      <li>
-                         <i class="fa fa-map-marker" aria-hidden="true"></i> <a href="#">Direccion</a>
-                      </li>
-                      <li>
-                         <i class="fa fa-envelope" aria-hidden="true"></i> <a href="#">Email</a>
-                      </li>
-                 </ul>
-             </div>
-
-         </div>
-      </div>
-  </footer>
-
-  <div class="tt-copy">
-  	<div class="container">
-  		<div class="row">
-
-  			<div class="col-sm-6">
-  				<div class="tt-copy-left">
-  					Copyright � company 2019. All rights reserved.
-  				</div>
-  			</div>
-
-  			<div class="col-sm-6">
-  				<div class="tt-copy-right">
-  					Created by: DTS
-  				</div>
-  			</div>
-
-  		</div>
-  	</div>
-  </div>
 
   </body>
 </html>
