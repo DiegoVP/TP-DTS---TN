@@ -20,6 +20,7 @@
   </head>
   <body>
     <?php include("header.php") ?>
+
     <div class="container-fluid">
       <section class="row destacados">
         <div class="col-12 col-md-10 offset-md-1 destacados">

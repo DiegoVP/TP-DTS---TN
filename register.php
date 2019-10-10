@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if(isset($_COOKIE["username"])){
+    $_SESSION["username"] = $_COOKIE["username"];
+    header("Location:index.php");
+}
+if($_POST){
+    if($_POST["recordarme"] != null){
+        setCookie("username",$_POST["username"]);
+    }
+    //valido los datos
+    //guardo en el json
+    $_SESSION["username"] = $_POST["username"];
+    header("Location:index.php");
+}
+?>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -48,26 +65,34 @@
       <p class=lead>Porfavor ingresar todos los datos requeridos.</p>
     </div>
 <div class=" listregister row">
-<form class= "col-12 col-lg-6">
+<form class= "col-12 col-lg-6" action="register.php" method="POST">
   <div class="form-group">
     <label for="formGroupExampleInput" class="col-sm-2 col-form-label">Nombres</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombres">
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombres" name="nombre">
   </div>
   <div class="form-group">
     <label for="formGroupExampleInput2" class="col-sm-2 col-form-lable">Apellidos</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellidos">
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellidos" name="apellido">
   </div>
   <div class="form-group">
     <label for="formGroupExampleInput3" class="col-sm-2 col-form-lable">Email</label>
-    <input type="email" class="form-control" id="formGroupExampleInput3" placeholder="Email">
+    <input type="email" class="form-control" id="formGroupExampleInput3" placeholder="Email" name="email">
   </div>
   <div class="form-group">
-    <label for="formGroupExampleInput4" class="col-sm-2 col-form-lable">Contraseña</label>
-    <input type="password" class="form-control" id="formGroupExampleInput4" placeholder="Password">
+    <label for="formGroupExampleInput4" class="col-sm-2 col-form-lable">Nombre de Usuario</label>
+    <input type="username" class="form-control" id="formGroupExampleInput4" placeholder="Nombre de Usuario" name="username">
   </div>
   <div class="form-group">
-    <label for="formGroupExampleInput5" class="col-4 col-form-lable">Confirmar Contraseña</label>
-    <input type="password" class="form-control" id="formGroupExampleInput5" placeholder="Confirm Password">
+    <label for="formGroupExampleInput5" class="col-sm-2 col-form-lable">Contraseña</label>
+    <input type="password" class="form-control" id="formGroupExampleInput5" placeholder="Password" name="password">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput6" class="col-4 col-form-lable">Confirmar Contraseña</label>
+    <input type="password" class="form-control" id="formGroupExampleInput6" placeholder="Confirm Password">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput7" class="col-4 col-form-lable">Recordarme</label>
+    <input type="checkbox" class="form-control" id="formGroupExampleInput7" value="recordar" name="recordarme">
     <br>
   <input class="btn btn-primary" type="submit" value="Submit">
   </div>

@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -60,6 +63,7 @@
     					<!-- T-USER -->
     					<ul class="tt-user">
     						<li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                <li><h3>Bienvenido <?= $_SESSION["username"] ?></h3></li>
     						<li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
     					</ul>
     					<div class="empty-space marg-lg-b30"></div>
