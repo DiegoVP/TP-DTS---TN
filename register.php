@@ -43,7 +43,7 @@
     <div class="inforegiter container-fluid ">
       <h1 id= "tituloregister2">Crear una cuenta</h1>
       <p class="back-link">
-        <a href="login.html">Volver</a>
+        <a href="login.php">Volver</a>
       </p>
       <p class=lead>Porfavor ingresar todos los datos requeridos.</p>
     </div>
