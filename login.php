@@ -1,4 +1,24 @@
 <!DOCTYPE html>
+<?php
+if(!isset($_SESSION))
+{
+    session_start();
+}
+if(isset($_COOKIE["username"])){
+    $_SESSION["username"] = $_COOKIE["username"];
+    header("Location:index.php");
+}
+if($_POST){
+    if($_POST["recordarme"] != null){
+        setCookie("username",$_POST["username"]);
+    }
+    //valido los datos
+    //guardo en el json
+    $_SESSION["username"] = $_POST["username"];
+    header("Location:index.php");
+}
+?>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <?php
-session_start();
+if(!isset($_SESSION))
+{
+    session_start();
+}
 if(isset($_COOKIE["username"])){
     $_SESSION["username"] = $_COOKIE["username"];
     header("Location:index.php");
@@ -94,7 +97,7 @@ if($_POST){
     <label for="formGroupExampleInput7" class="col-4 col-form-lable">Recordarme</label>
     <input type="checkbox" class="form-control" id="formGroupExampleInput7" value="recordar" name="recordarme">
     <br>
-  <input class="btn btn-primary" type="submit" value="Submit">
+  <input class="btn btn-primary" type="submit" value="Registrarme">
   </div>
 </form>
 
