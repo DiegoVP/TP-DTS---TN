@@ -23,7 +23,7 @@ if($_POST){
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="with=device-with, initial-scale=1">
     <!-- ******* BOOTSTRAP-JAVA ***** -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -68,7 +68,7 @@ if($_POST){
       <p class=lead>Porfavor ingresar todos los datos requeridos.</p>
     </div>
 <div class=" listregister row">
-<form class= "col-12 col-lg-6" action="register.php" method="POST">
+<form class= "col-12 col-lg-6" action="register.php" method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="formGroupExampleInput" class="col-sm-2 col-form-label">Nombres</label>
     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombres" name="nombre">
@@ -85,6 +85,7 @@ if($_POST){
     <label for="formGroupExampleInput4" class="col-sm-2 col-form-lable">Nombre de Usuario</label>
     <input type="username" class="form-control" id="formGroupExampleInput4" placeholder="Nombre de Usuario" name="username">
   </div>
+  <input type="file" name="avatar" placeholder="Ingrese su avatar">
   <div class="form-group">
     <label for="formGroupExampleInput5" class="col-sm-2 col-form-lable">Contraseña</label>
     <input type="password" class="form-control" id="formGroupExampleInput5" placeholder="Password" name="password">
