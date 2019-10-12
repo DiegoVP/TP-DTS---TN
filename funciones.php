@@ -43,7 +43,7 @@ function validarRegistro($datos,$imagen){
     }
 
   //AVATAR
-    if(!isset($_FILES["avatar"])){
+    if(isset($_FILES["avatar"])){
         $tipoImagen = $_FILES['avatar']['type'];
         $avatarAdress = "";
         if( $tipoImagen == 'image/png' ||
@@ -52,7 +52,6 @@ function validarRegistro($datos,$imagen){
             $tipoImagen == 'image/gif'){
             $ext = pathinfo($_FILES['avatar']['name'],  PATHINFO_EXTENSION);
             $avatarAdress = 'fotos/' . $_POST['email'] . '.' . $ext;
-            move_uploaded_file($_FILES['avatar']['tmp_name'], $avatarAdress);
         }else{
             $_POST[] = ["validacion_imagen" => "El formato debe ser png, jpg o gif"];
             $errores = true;
@@ -97,8 +96,8 @@ function validarRegistro($datos,$imagen){
 
 
 
-  // Guardo de usuario en json
 
+  //SI ESTA CORRECTO
     if(!$errores)  {
 
         $usuario = [
@@ -110,12 +109,16 @@ function validarRegistro($datos,$imagen){
           "avatarAdress" => $avatarAdress,
           "activo" => 1
         ];
-
+  // Guardo de usuario en json 
         $usuariosEnJSON = file_get_contents("usuarios.json");
         $usuarios = json_decode($usuariosEnJSON);
         $usuarios[] = $usuario;
         $nuevosUsuariosEnJSON = json_encode($usuarios);
         file_put_contents("usuarios.json",$nuevosUsuariosEnJSON);
+
+  // Guardo de imagen
+        move_uploaded_file($_FILES['avatar']['tmp_name'], $avatarAdress);
+
 
   //INICIA SESSION
         $_SESSION["username"] = $_POST["username"];

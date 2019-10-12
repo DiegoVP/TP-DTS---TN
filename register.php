@@ -10,7 +10,7 @@ if(!isset($_SESSION))
     session_start();
 }
 
-if($_SESSION["username"]){
+if(isset($_SESSION["username"])){
 
   header("Location:index.php");
 }

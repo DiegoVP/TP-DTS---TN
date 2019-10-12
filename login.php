@@ -8,7 +8,7 @@ if(isset($_COOKIE["username"])){
     $_SESSION["username"] = $_COOKIE["username"];
     header("Location:index.php");
 }
-if($_SESSION["username"]){
+if(isset($_SESSION["username"])){
 
   header("Location:index.php");
 }
