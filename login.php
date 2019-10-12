@@ -8,6 +8,10 @@ if(isset($_COOKIE["username"])){
     $_SESSION["username"] = $_COOKIE["username"];
     header("Location:index.php");
 }
+if($_SESSION["username"]){
+
+  header("Location:index.php");
+}
 if($_POST){
     if($_POST["recordarme"] != null){
         setCookie("username",$_POST["username"]);
