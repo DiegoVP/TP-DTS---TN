@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 setCookie("username","",time()-1);
 session_destroy();
-header("Location:register.php");
+header("Location:index.php");

@@ -66,7 +66,8 @@ if(!isset($_SESSION))
     					<!-- T-USER -->
     					<ul class="tt-user">
     						<li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                <li><h3><?= $_SESSION["username"] ?></h3></li>
+                <li><h3><?php if(isset($_SESSION["username"])){
+                  echo("Hola ".$_SESSION["username"]."!");}; ?></h3></li>
                 <li><a href="logout.php">Cerrar Sesión</a></li>
     						<li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
     					</ul>
