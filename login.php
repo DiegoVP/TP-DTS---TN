@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <?php
+require_once ("funciones.php");
+
 if(!isset($_SESSION))
 {
     session_start();
@@ -12,15 +14,11 @@ if(isset($_SESSION["username"])){
 
   header("Location:index.php");
 }
-if($_POST){
-    if($_POST["recordarme"] != null){
-        setCookie("username",$_POST["username"]);
-    }
-    //valido los datos
-    //guardo en el json
-    $_SESSION["username"] = $_POST["username"];
-    header("Location:index.php");
+if(isset($_POST["iniciarSession"])){
+  $invalidos= validarLogin($_POST);
+var_dump($invalidos);
 }
+
 ?>
 
 <html lang="en" dir="ltr">
@@ -74,20 +72,20 @@ if($_POST){
       <div class= "row" >
     <div class="col-md-12 col-lg-6" id=logininfo >
       <h4>Iniciar seción</h4>
-      <form>
+      <form action="login.php" method="POST">
   <div class="form-group">
     <label for="exampleInputEmail1">Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Contraseña</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
   </div>
   <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="recordarme">
     <label class="form-check-label-Recordarme" for="exampleCheck1">Recordarme</label>
   </div>
-  <button type="submit" class="btn btn-primary">Iniciar seción</button>
+  <button type="submit" class="btn btn-primary" name="iniciarSession">Iniciar seción</button>
     <p id="forgotpassword">
       <a href="">Olvido su contraseña?</a></p>
 </form>

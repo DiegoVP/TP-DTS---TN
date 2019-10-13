@@ -109,7 +109,7 @@ function validarRegistro($datos,$imagen){
           "avatarAdress" => $avatarAdress,
           "activo" => 1
         ];
-  // Guardo de usuario en json 
+  // Guardo de usuario en json
         $usuariosEnJSON = file_get_contents("usuarios.json");
         $usuarios = json_decode($usuariosEnJSON);
         $usuarios[] = $usuario;
@@ -128,4 +128,22 @@ function validarRegistro($datos,$imagen){
   return $_POST;
 }
 
- ?>
+function validarLogin($datos){
+  $_POST=$datos;
+  $usuariosEnJSON = file_get_contents("usuarios.json");
+  $usuarios = json_decode($usuariosEnJSON,true);
+  foreach($usuarios as $usuario){
+    if($usuario["email"] == $_POST["email"]){
+        if(password_verify($_POST["password"],$usuario["password"])){
+            if($_POST["recordarme"] != null){
+                setCookie("username",$usuario["username"]);
+            }
+            //INICIA SESSION
+            session_start();
+            $_SESSION["username"] = $usuario["username"];
+            header("Location:index.php");
+        }
+    }
+  }
+  return "Los datos son invalidos";
+}
