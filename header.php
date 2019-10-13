@@ -3,7 +3,12 @@
 if(!isset($_SESSION))
 {
     session_start();
+    }
+if(isset($_COOKIE["username"])){
+    $_SESSION["username"] = $_COOKIE["username"];
+
 }
+
 ?>
 <html lang="en" dir="ltr">
   <head>

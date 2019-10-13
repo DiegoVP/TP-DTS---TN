@@ -91,7 +91,7 @@ function validarRegistro($datos,$imagen){
 
   //RECORDARME
     if($_POST["recordarme"] != null){
-        setCookie("username",$_POST["username"],time()+2500000);
+        setcookie("username","$_POST["username"]", time() + 60 * 60* 24 );
     }
   //SI ESTA CORRECTO
     if(!$errores)  {
@@ -132,7 +132,9 @@ function validarLogin($datos){
     if($usuario["email"] == $_POST["email"]){
         if(password_verify($_POST["password"],$usuario["password"])){
             if($_POST["recordarme"] != null){
-                setCookie("username",$usuario["username"],time()+2500000);
+                $username=$usuario["username"];
+                setcookie("username", "$username", time() + 60 * 60* 24 );
+                var_dump($_COOKIE);
             }
             //INICIA SESSION
             session_start();
