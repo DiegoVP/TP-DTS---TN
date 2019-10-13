@@ -85,8 +85,10 @@ if($_POST){
     <label for="formGroupExampleInput4" class="col-sm-2 col-form-lable">Nombre de Usuario</label>
     <input type="username" class="form-control" id="formGroupExampleInput4" placeholder="Nombre de Usuario" name="username">
   </div>
-  <input type="file" name="avatar" placeholder="Ingrese su avatar">
   <div class="form-group">
+    <input type="file" name="avatar" placeholder="Ingrese su avatar">
+  </div>
+  <div>
     <label for="formGroupExampleInput5" class="col-sm-2 col-form-lable">Contraseña</label>
     <input type="password" class="form-control" id="formGroupExampleInput5" placeholder="Password" name="password">
   </div>
