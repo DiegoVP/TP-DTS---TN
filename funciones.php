@@ -90,8 +90,11 @@ function validarRegistro($datos,$imagen){
     }
 
   //RECORDARME
-    if($_POST["recordarme"] != null){
-        setcookie("username","$_POST["username"]", time() + 60 * 60* 24 );
+    if(isset($_POST["recordarme"])){
+      if($_POST["recordarme"] != null){
+      $auxusername=$_POST["username"];
+        setcookie("username","$auxusername", time() + 60 * 60* 24 );
+      }
     }
   //SI ESTA CORRECTO
     if(!$errores)  {

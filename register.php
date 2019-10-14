@@ -28,7 +28,7 @@ if(isset($_COOKIE["username"])){
     if(isset($datos["validacion_imagen"])){
       $avatar = $datos["validacion_imagen"];
     }
-    var_dump($datos);
+  
 
   }
 ?>
@@ -85,24 +85,25 @@ if(isset($_COOKIE["username"])){
       <form class= "col-12 col-lg-6" action="register.php" method="POST" enctype="multipart/form-data">
         <div class="form-group">
           <label for="formGroupExampleInput" class="col-sm-2 col-form-label">Nombres</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombres" name="nombre">
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombres" name="nombre" value="<?php if($datos){echo($datos["nombre"]); } ?>" >
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2" class="col-sm-2 col-form-lable">Apellidos</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellidos" name="apellido">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellidos" name="apellido" value="<?php if($datos){echo($datos["apellido"]); } ?>">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput3" class="col-sm-2 col-form-lable">Email</label>
-          <input type="email" class="form-control" id="formGroupExampleInput3" placeholder="Email" name="email">
+          <input type="email" class="form-control" id="formGroupExampleInput3" placeholder="Email" name="email" value="<?php if($datos){echo($datos["email"]); } ?>">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput4" class="col-sm-2 col-form-lable">Nombre de Usuario</label>
-          <input type="username" class="form-control" id="formGroupExampleInput4" placeholder="Nombre de Usuario" name="username">
+          <input type="username" class="form-control" id="formGroupExampleInput4" placeholder="Nombre de Usuario" name="username"value="<?php if($datos){echo($datos["username"]); } ?>">
         </div>
         <input type="file" name="avatar" placeholder="Ingrese su avatar">
+        <?php //if($datos){echo($datos["validacion_imagen"]); } ?>
         <div class="form-group">
           <label for="formGroupExampleInput5" class="col-sm-2 col-form-lable">Contraseña</label>
-          <input type="password" class="form-control" id="formGroupExampleInput5" placeholder="Password" name="password">
+          <input type="password" class="form-control" id="formGroupExampleInput5" placeholder="Password" name="password" >
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput6" class="col-4 col-form-lable">Confirmar Contraseña</label>
