@@ -3,7 +3,12 @@
 if(!isset($_SESSION))
 {
     session_start();
+    }
+if(isset($_COOKIE["username"])){
+    $_SESSION["username"] = $_COOKIE["username"];
+
 }
+
 ?>
 <html lang="en" dir="ltr">
   <head>
@@ -64,12 +69,16 @@ if(!isset($_SESSION))
     					<div class="empty-space marg-lg-b15"></div>
 
     					<!-- T-USER -->
+              <h3 class="saludo"style='text-decoration:none;color:Orange;'><?php if(isset($_SESSION["username"])){
+                echo("Hola ".$_SESSION["username"]."!");}; ?></h3></li>
     					<ul class="tt-user">
     						<li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                <li><h3><?= $_SESSION["username"] ?></h3></li>
-                <li><a href="logout.php">Cerrar Sesión</a></li>
     						<li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
     					</ul>
+              <?php if(isset($_SESSION["username"])){?>
+                <a id="logout"  style='text-decoration:none;color:Orange;' href="logout.php">Cerrar Sesión</a></li>
+              <?php ;}; ?>
+
     					<div class="empty-space marg-lg-b30"></div>
     					<!-- TT-buscar -->
     					<form method="post">

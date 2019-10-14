@@ -90,13 +90,12 @@ function validarRegistro($datos,$imagen){
     }
 
   //RECORDARME
-    if($_POST["recordarme"] != null){
-        setCookie("username",$_POST["username"]);
+    if(isset($_POST["recordarme"])){
+      if($_POST["recordarme"] != null){
+      $auxusername=$_POST["username"];
+        setcookie("username","$auxusername", time() + 60 * 60* 24 );
+      }
     }
-
-
-
-
   //SI ESTA CORRECTO
     if(!$errores)  {
 
@@ -136,12 +135,15 @@ function validarLogin($datos){
     if($usuario["email"] == $_POST["email"]){
         if(password_verify($_POST["password"],$usuario["password"])){
             if($_POST["recordarme"] != null){
-                setCookie("username",$usuario["username"]);
+                $username=$usuario["username"];
+                setcookie("username", "$username", time() + 60 * 60* 24 );
+                var_dump($_COOKIE);
             }
             //INICIA SESSION
             session_start();
             $_SESSION["username"] = $usuario["username"];
             header("Location:index.php");
+            exit;
         }
     }
   }
