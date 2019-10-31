@@ -28,9 +28,6 @@ if(isset($_COOKIE["username"])){
     if(isset($datos["validacion_imagen"])){
       $avatar = $datos["validacion_imagen"];
     }
-  var_dump($datos);
-
-
   }
 ?>
 
@@ -94,38 +91,51 @@ if(isset($_COOKIE["username"])){
 
         <div class="form-group">
           <label for="formGroupExampleInput2" class="col-sm-2 col-form-lable">Apellidos</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellidos" name="apellido" value="<?php if($datos){echo($datos["apellido"]); } ?>">
-          <?php if($datos&&$_POST["nombre"]!=$datos["nombre"]){?>
-          <span class="invalido"><?php echo($datos["nombre"]); ?></span>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellidos" name="apellido" value="<?php if($datos&&$_POST["apellido"]==$datos["apellido"]){echo($_POST["apellido"]); } ?>">
+          <?php if($datos&&$_POST["apellido"]!=$datos["apellido"]){?>
+          <span class="invalido"><?php echo($datos["apellido"]); ?></span>
           <?php } ?>
         </div>
 
         <div class="form-group">
           <label for="formGroupExampleInput3" class="col-sm-2 col-form-lable">Email</label>
-          <input type="email" class="form-control" id="formGroupExampleInput3" placeholder="Email" name="email" value="<?php if($datos){echo($datos["email"]); } ?>">
-          <?php if($datos&&$_POST["nombre"]!=$datos["nombre"]){?>
-          <span class="invalido"><?php echo($datos["nombre"]); ?></span>
+          <input type="email" class="form-control" id="formGroupExampleInput3" placeholder="Email" name="email" value="<?php if($datos&&$_POST["email"]==$datos["email"]){echo($_POST["email"]); } ?>">
+          <?php if($datos&&$_POST["email"]!=$datos["email"]){?>
+          <span class="invalido"><?php echo($datos["email"]); ?></span>
           <?php } ?>
         </div>
 
         <div class="form-group">
           <label for="formGroupExampleInput4" class="col-sm-2 col-form-lable">Nombre de Usuario</label>
-          <input type="username" class="form-control" id="formGroupExampleInput4" placeholder="Nombre de Usuario" name="username"value="<?php if($datos){echo($datos["username"]); } ?>">
-          <?php if($datos&&$_POST["nombre"]!=$datos["nombre"]){?>
-          <span class="invalido"><?php echo($datos["nombre"]); ?></span>
+          <input type="username" class="form-control" id="formGroupExampleInput4" placeholder="Nombre de Usuario" name="username"value="<?php if($datos&&$_POST["username"]==$datos["username"]){echo($_POST["username"]); } ?>">
+          <?php if($datos&&$_POST["username"]!=$datos["username"]){?>
+          <span class="invalido"><?php echo($datos["username"]); ?></span>
           <?php } ?>
         </div>
 
         <input type="file" name="avatar" placeholder="Ingrese su avatar">
-        <?php //if($datos){echo($datos["validacion_imagen"]); } ?>
+        <?php if(isset($_FILES['avatar'])){?>
+        <span class="invalido"><?php echo("Por favor vuelva a seleccionar la imagen"); ?></span>
+        <?php } ?>
+
+
         <div class="form-group">
           <label for="formGroupExampleInput5" class="col-sm-2 col-form-lable">Contraseña</label>
           <input type="password" class="form-control" id="formGroupExampleInput5" placeholder="Password" name="password" >
+          <?php if($datos&&$_POST["password"]!=$datos["password"]){?>
+          <span class="invalido"><?php echo($datos["password"]); ?></span>
+          <?php } ?>
+          <?php if(!isset($_FILES['password'])){?>
+          <p class="col-12 aviso">La contraseña debe tener una longitud mayor a 6 caracteres y menor a 16, debe contener mayusculas,minusculas y un número.</p>
+          <?php } ?>
         </div>
 
         <div class="form-group">
           <label for="formGroupExampleInput6" class="col-4 col-form-lable">Confirmar Contraseña</label>
-          <input type="password" class="form-control" id="formGroupExampleInput6" placeholder="Confirm Password"name="passwordConfirm">
+          <input type="password" class="form-control" id="formGroupExampleInput6" placeholder="Confirm Password" name="passwordConfirm">
+          <?php if($datos&&$_POST["passwordConfirm"]!=$datos["passwordConfirm"]){?>
+          <span class="invalido"><?php echo($datos["passwordConfirm"]); ?></span>
+          <?php } ?>
         </div>
 
         <div class="form-group">

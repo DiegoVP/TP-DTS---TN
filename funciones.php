@@ -59,14 +59,14 @@ function validarRegistro($datos,$imagen){
 
 
   //PASSWORD
-    if(strlen($datos["password"]) < 6)  {
+    if(strlen($datos["password"])< 6)  {
         $datos["password"] = "La clave debe tener al menos 6 caracteres";
         $errores =true;
+    }else if(strlen($datos["password"]) > 16)  {
+          $datos["password"] = "La clave no puede tener más de 16 caracteres";
+          $errores =true;
     }
-    if(strlen($datos["password"]) > 16)  {
-        $datos["password"] = "La clave no puede tener más de 16 caracteres";
-        $errores =true;
-    }
+
     if (!preg_match('`[a-z]`',$datos["password"]))  {
         $datos["password"] = "La clave debe tener al menos una letra minúscula";
         $errores =true;
@@ -88,15 +88,17 @@ function validarRegistro($datos,$imagen){
         $contrasenia = password_hash($datos["password"],PASSWORD_DEFAULT);
     }
 
-  //RECORDARME
-    if(isset($datos["recordarme"])){
-      if($datos["recordarme"] != null){
-      $auxusername=$datos["username"];
-        setcookie("username","$auxusername", time() + 60 * 60* 24 );
-      }
-    }
+
   //SI ESTA CORRECTO
     if(!$errores)  {
+
+      //RECORDARME
+        if(isset($datos["recordarme"])){
+          if($datos["recordarme"] != null){
+          $auxusername=$datos["username"];
+            setcookie("username","$auxusername", time() + 60 * 60* 24 );
+          }
+        }
 
         $usuario = [
           "nombre" => $datos["nombre"],
