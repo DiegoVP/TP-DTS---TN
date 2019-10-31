@@ -25,7 +25,7 @@
     <?php include("header.php") ?>
     <div class="container-fluid">
       <h2 class="home col-12 text-center ">Carga de productos</h2>
-      <form class="" action="index.html" method="post">
+      <form class="" action="alta-de.-productos.php" method="post">
         <div class="col-12 col-md-6">
           <div class="row">
             <div class="col-10 offset-1 a">
@@ -61,10 +61,6 @@
                 <option value=""><?php echo $x;?></option>
                 <?php $x=$x+5;}  ?>
               </select>
-
-
-
-
             </div>
 
           </div>
@@ -137,11 +133,14 @@
                 <option value="">dorado</option>
                 <option value="">verde</option>
               </select>
+              <label class="col-12" for="descripcion">Incluya una descripción del producto</label>
+              <textarea name="descripcion" rows="8" cols="80" name="desc" placeholder="Incluye una desripcion del reloj"></textarea>
 
             </div>
 
           </div>
         </div>
+        <input class="btn btn-primary col-4 offset-4" type="submit" value="Cargar producto" name="submit" style="margin-bottom:50px">
       </form>
     </div>
     <?php include("footer.php") ?>
