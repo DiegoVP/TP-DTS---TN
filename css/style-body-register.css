@@ -18,3 +18,11 @@ img.logoregistro{
   margin-left: 25%;
   margin-top: 20px;
 }
+span.invalido{
+font-family: 'Playfair Display', serif;
+color: red;
+}
+p.aviso{
+  color: red;
+  font-family: 'Playfair Display', serif;
+}
