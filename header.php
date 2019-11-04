@@ -73,7 +73,7 @@ if(isset($_COOKIE["username"])){
                 echo("Hola ".$_SESSION["username"]."!");}; ?></h3></li>
     					<ul class="tt-user">
     						<li><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-    						<li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+    						<li><a href="carrito.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
     					</ul>
               <?php if(isset($_SESSION["username"])){?>
                 <a id="logout"  style='text-decoration:none;color:Orange;' href="logout.php">Cerrar Sesión</a></li>
