@@ -126,7 +126,7 @@ if(isset($_COOKIE["username"])){
           <span class="invalido"><?php echo($datos["password"]); ?></span>
           <?php } ?>
           <?php if(!isset($_FILES['password'])){?>
-          <p class="col-12 aviso">La contraseña debe tener una longitud mayor a 6 caracteres y menor a 16, debe contener mayusculas,minusculas y un número.</p>
+          <p class="col-12 aviso">*La contraseña debe tener una longitud mayor a 6 caracteres y menor a 16, debe contener mayusculas,minusculas y un número.</p>
           <?php } ?>
         </div>
 
