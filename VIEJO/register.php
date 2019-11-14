@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <?php
-//errores para mostrar
-$errorNombre = "";
-$errorApellido ="";
-$errorEmail = "";
-$errorUser = "";
-$errorAvatar = "";
-$errorContrasenia = "";
-$errores = false;
+include_once("funciones.php");
+
+$datos = [];
+
 
 if(!isset($_SESSION))
 {
@@ -28,46 +24,11 @@ if(isset($_COOKIE["username"])){
 
 
   if(isset($_POST["Registrarme"])){
-    require_once 'clases/Validador.php';
-    $validador = new Validador;
-
-    $errorNombre = $validador->validarNombre($_POST["nombre"]);
-    $errorApellido =  $validador->validarApellido($_POST["apellido"]);
-    $errorEmail =  $validador->validarEmail($_POST["email"]);
-    $errorUser =  $validador->validarUsername($_POST["username"]);
-    $errorAvatar = $validador->validarAvatar($_FILES);
-    $errorContrasenia = $validador->validarContrasenia($_POST["password"],$_POST["passwordConfirm"]);
-    if($errorNombre=="OK"&&$errorContrasenia=="OK"&&$errorApellido=="OK"&&$errorEmail=="OK"&&$errorUser=="OK"&&$errorAvatar=="OK"){
-      require_once 'clases/bbdd.php';
-        $bbdd = new BBDD;
-
-        // GUARDO IMAGEN EN SERVIDOR
-        $ext = pathinfo($imagen['avatar']['name'],  PATHINFO_EXTENSION);
-        $avatarAdress = 'fotos/' . $_POST['email'] . '.' . $ext;
-        move_uploaded_file($_FILES['avatar']['tmp_name'], $avatarAdress);
-
-        // REGISTRO USUARIO EN BASE DE DATOS
-        $idUser = $bbdd->registroUsuario($_POST["nombre"],$_POST["apellido"],$_POST["email"],$_POST["username"],$avatarAdress,$_POST["password"]);
-
-        //si se registro bien...
-        if($id_user){
-          //RECORDARME
-            if(isset($_POST["recordarme"])){
-              if($_POST["recordarme"] != null){
-                $usernameaux=$_POST["username"];
-                setcookie("username","$usernameaux", time() + 60 * 60* 24 );
-              }
-            }
-            //LOGUEO AL USUARIO Y REDIRIJO AL HOME
-            session_start();
-          $_SESSION["username"] = $_POST["nombre"];
-            header("Location:home.php");
-        }
-
+    $datos =  validarRegistro($_POST,$_FILES);
+    if(isset($datos["validacion_imagen"])){
+      $avatar = $datos["validacion_imagen"];
     }
-
-    }
-
+  }
 ?>
 
 <html lang="en" dir="ltr">
@@ -122,26 +83,34 @@ if(isset($_COOKIE["username"])){
       <form class= "col-12 col-lg-6" action="register.php" method="POST" enctype="multipart/form-data">
         <div class="form-group">
           <label for="formGroupExampleInput" class="col-sm-2 col-form-label">Nombres</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombres" name="nombre" value="<?php if($errorNombre=="OK"){echo($_POST["nombre"]); } ?>" >
-          <span class="invalido"><?php echo($errorNombre); ?></span>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombres" name="nombre" value="<?php if($datos&&$_POST["nombre"]==$datos["nombre"]){echo($_POST["nombre"]); } ?>" >
+          <?php if($datos&&$_POST["nombre"]!=$datos["nombre"]){?>
+          <span class="invalido"><?php echo($datos["nombre"]); ?></span>
+          <?php } ?>
         </div>
 
         <div class="form-group">
           <label for="formGroupExampleInput2" class="col-sm-2 col-form-lable">Apellidos</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellidos" name="apellido" value="<?php if($errorApellido=="OK"){echo($_POST["apellido"]); } ?>">
-          <span class="invalido"><?php echo($errorApellido); ?></span>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellidos" name="apellido" value="<?php if($datos&&$_POST["apellido"]==$datos["apellido"]){echo($_POST["apellido"]); } ?>">
+          <?php if($datos&&$_POST["apellido"]!=$datos["apellido"]){?>
+          <span class="invalido"><?php echo($datos["apellido"]); ?></span>
+          <?php } ?>
         </div>
 
         <div class="form-group">
           <label for="formGroupExampleInput3" class="col-sm-2 col-form-lable">Email</label>
-          <input type="email" class="form-control" id="formGroupExampleInput3" placeholder="Email" name="email" value="<?php if($errorEmail=="OK"){echo($_POST["email"]); } ?>">
-          <span class="invalido"><?php echo($errorEmail); ?></span>
+          <input type="email" class="form-control" id="formGroupExampleInput3" placeholder="Email" name="email" value="<?php if($datos&&$_POST["email"]==$datos["email"]){echo($_POST["email"]); } ?>">
+          <?php if($datos&&$_POST["email"]!=$datos["email"]){?>
+          <span class="invalido"><?php echo($datos["email"]); ?></span>
+          <?php } ?>
         </div>
 
         <div class="form-group">
           <label for="formGroupExampleInput4" class="col-sm-2 col-form-lable">Nombre de Usuario</label>
-          <input type="username" class="form-control" id="formGroupExampleInput4" placeholder="Nombre de Usuario" name="username"value="<?php if($errorUser=="OK"){echo($_POST["username"]); } ?>">
-          <span class="invalido"><?php echo($errorUser); ?></span>
+          <input type="username" class="form-control" id="formGroupExampleInput4" placeholder="Nombre de Usuario" name="username"value="<?php if($datos&&$_POST["username"]==$datos["username"]){echo($_POST["username"]); } ?>">
+          <?php if($datos&&$_POST["username"]!=$datos["username"]){?>
+          <span class="invalido"><?php echo($datos["username"]); ?></span>
+          <?php } ?>
         </div>
 
         <input type="file" name="avatar" placeholder="Ingrese su avatar">
@@ -153,19 +122,19 @@ if(isset($_COOKIE["username"])){
         <div class="form-group">
           <label for="formGroupExampleInput5" class="col-sm-2 col-form-lable">Contraseña</label>
           <input type="password" class="form-control" id="formGroupExampleInput5" placeholder="Password" name="password" >
-          <?php if($errorContrasenia!="OK"){?>
-          <span class="invalido"><?php echo($errorContrasenia); ?></span>
+          <?php if($datos&&$_POST["password"]!=$datos["password"]){?>
+          <span class="invalido"><?php echo($datos["password"]); ?></span>
           <?php } ?>
-          <?php if(!isset($_POST['password'])){?>
-          <p class="col-12 aviso">La contraseña debe tener una longitud mayor a 6 caracteres y menor a 16. Debe contener mayusculas,minusculas y al menos un número.</p>
+          <?php if(!isset($_FILES['password'])){?>
+          <p class="col-12 aviso">*La contraseña debe tener una longitud mayor a 6 caracteres y menor a 16, debe contener mayusculas,minusculas y un número.</p>
           <?php } ?>
         </div>
 
         <div class="form-group">
           <label for="formGroupExampleInput6" class="col-4 col-form-lable">Confirmar Contraseña</label>
           <input type="password" class="form-control" id="formGroupExampleInput6" placeholder="Confirm Password" name="passwordConfirm">
-          <?php if($errorContrasenia!="OK"){?>
-          <span class="invalido"><?php echo($errorContrasenia); ?></span>
+          <?php if($datos&&$_POST["passwordConfirm"]!=$datos["passwordConfirm"]){?>
+          <span class="invalido"><?php echo($datos["passwordConfirm"]); ?></span>
           <?php } ?>
         </div>
 

@@ -1,0 +1,26 @@
+/* ------Body-login----- */
+body.bLogin{
+  background: #716286;
+  margin: 0;
+  padding: 0;
+}
+div #titulologinpage{
+margin: 0px;
+
+padding: 10px;
+}
+div #inforegister {
+  border-radius: 0px;
+  padding: 25px;
+  margin-right: 0;
+}
+div #logininfo {
+  background:  #716286;
+  border-radius: 0px;
+  padding: 50px;
+  margin-right: 0;
+  ;
+}
+label.form-check-label-Recordarme{
+  margin-left: 20px;
+}

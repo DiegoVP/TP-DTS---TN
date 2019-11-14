@@ -1,0 +1,116 @@
+/*------Colores--------------
+violeta: #231038
+*/
+/* -----Destacados----- */
+section.destacados{
+  margin-top: 50px;
+  border-top: solid black 5px;
+  border-bottom: solid grey 3px;
+  background: #c1c1c1;
+}
+section div.destacados{
+  font-family: 'Playfair Display', serif;
+  color: black;
+  padding-bottom: 50PX;
+  border-radius: 10px;
+}
+h2.home{
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h4.home{
+  font-size: 20px;
+  margin-top: 15px;
+}
+div.imagen{
+  display: flex;
+  justify-content: center;
+}
+div.p-2.destacados{
+  font-size: 25px;
+  display: inline-block;
+  background-color:#231038 ;
+  color: white;
+  font-weight: bold;
+}
+img.destacados{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 150px;
+  border-radius: 10px;
+}
+article.destacados{
+  margin-top: 40px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transform: scale(1);
+  transition-duration: 0.5s;
+}
+article.destacados:hover{
+  transform: scale(1.15);
+  transition-duration: 0.5s;
+}
+div.articulo-fondo{
+  width: 80%;
+  height: 250px;
+  background: white;
+  margin: auto;
+  /* border: solid black 4px; */
+  border-radius: 5px;
+}
+div.destacados-celu{
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* -----promociones---- */
+section.promociones{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: #231038;
+  padding-bottom: 40px;
+}
+section div.promociones{
+  font-family: 'Playfair Display', serif;
+  color: WHITE;
+  background: #231038;
+  padding: 10PX;
+  border-radius: 10px;
+}
+div.bd-example{
+  border: solid 3px rgb(0, 0, 0);
+}
+/* -----HOMBRE MUJER---- */
+section.hombre-mujer{
+  margin-top: 50px;
+  padding: 0px;
+}
+section.hombre-mujer a div{
+  margin: 0px;
+}
+section.hombre-mujer a {
+  margin: 0px;
+}
+section.hombre-mujer div{
+  transition-duration: 0.5s;
+}
+section.hombre-mujer div:hover{
+  transform: scale(1.02);
+  transition-duration: 0.5s;
+}
+
+/* -----frecuent Ask Question ---- */
+
+div.faq{
+  background: #c1c1c1;
+margin-top: 20px;
+margin-bottom: 20px;
+color: black;
+padding-bottom: 5px;
+}
+.faq div{
+  border-top: solid 10px white;
+}

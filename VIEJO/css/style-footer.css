@@ -1,0 +1,62 @@
+/*------Colores--------------
+violeta: #231038
+dorado: #ffbf00
+gris footer: #51645A
+*/
+
+
+/* -----Footer----- */
+footer{
+     background-color: #231038;
+     padding:10px 0px;
+}
+
+.contacto span , .menu span{
+   color: #FFF;
+   font-weight: bold;
+   border-bottom: 1px solid #c7c7c7;
+   padding:10px 0px;
+   display: block;
+   text-transform: uppercase;
+   font-size: 16px;
+   letter-spacing: 3px;
+}
+
+.contacto li a , .menu li a{
+    color:#FFF;
+    letter-spacing: 3px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.contacto li, .menu li{
+    margin:20px 0px;
+    list-style: none;
+}
+
+.contacto li a:hover , .menu li a:hover{
+    color: #ffbf00;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.contacto .fa{
+    color: #ffbf00;
+    margin-right: 10px;
+    font-size:18px;
+}
+
+.tt-copy
+{
+font-size: 15px;
+line-height: 20px;
+color: #fff;
+background: #51645A;
+padding: 10px 0;
+font-family: 'Open Sans', sans-serif;
+}
+.tt-copy-right {
+text-align: right;
+}
